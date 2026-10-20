@@ -47,7 +47,7 @@
                             Have a some workflows that take a lot of input data
                             (~1 TB)
                         </li>
-                        <li>Running on cloud VMs (that's where the data is)</li>
+                        <li>Running on cloud VMs (that's where the input data is)</li>
                         <li>Outputs are sometimes in the 100 GB range</li>
                         <li>
                             Downloading that amount of data <em>will</em> take a
@@ -55,8 +55,9 @@
                         </li>
                         <li>
                             I dislike waiting for
-                            <code>scp</code> at 10 MB/s
+                            <code>scp</code> at 8 MB/s
                         </li>
+                        <li><code>sshfs</code> doesn't help</li>
                     </ul>
                 </section>
                 <section>
@@ -138,8 +139,7 @@
                             <code>screen</code>, good luck
                         </li>
                         <li>
-                            Good luck anyway, because the color themes often
-                            result in unreadable combinations
+                            Good luck anyway, because color themes are awful these days
                         </li>
                     </ul>
                 </section>
@@ -320,10 +320,10 @@ let res = run_app(&mut terminal, &mut app);
                     ></video>
                 </section>
                 <section>
-                    <img src="images/gis-pigeon.png" />
+                    <img src="images/text-image.png" />
                 </section>
                 <section>
-                    <img src="images/text-image.png" />
+                    <img src="images/gis-pigeon.png" />
                 </section>
                 <section>
                     <h3>Missing features (for me)</h3>
@@ -377,47 +377,12 @@ let res = run_app(&mut terminal, &mut app);
                     </ul>
                 </section>
                 <section>
-                    <h3>GeoRust</h3>
-                    <ul style="font-size: 0.7em">
-                        <li>
-                            Umbrella organization covering different Rust GIS
-                            projects
-                        </li>
-                        <li>
-                            Geometry: <code>geo</code>, <code>geos</code
-                            ><sup>*</sup>, <code>robust</code>,
-                            <code>geographiclib</code>
-                        </li>
-                        <li>
-                            Spatial indexing (k-NN query): <code>rstar</code>
-                        </li>
-                        <li>
-                            Coordinate transforms: <code>proj</code
-                            ><sup>*</sup>, <code>geodesy</code><sup>†</sup>
-                        </li>
-                        <li>
-                            Formats: <code>gdal</code><sup>*</sup>,
-                            <code>netcdf</code><sup>*</sup>, <code>gpx</code>,
-                            <code>geojson</code>, <code>wkt</code>,
-                            <code>wkb</code>, <code>kml</code>,
-                            <code>osm</code>, <code>transit</code>,
-                            <code>shapefile</code>, GeoTIFF<sup>‡</sup>,
-                            STAC<sup>†</sup>
-                        </li>
-                        <li>
-                            Utilities: <code>geozero</code>,
-                            <code>geocoding</code>, <code>geohash</code>,
-                            <code>polyline</code>
-                        </li>
-                        <li>Toolkits: <code>rinex</code></li>
+                    <h3>Was it worth it?</h3>
+                    <ul>
+                        <li>It works, if you don't need too many features</li>
+                        <li>It's fast, if your window is small</lib>
+                        <li class="fragment">Alternatives? (GUI + headless server component)</li>
                     </ul>
-                    <div style="text-align: left; font-size: 0.7em">
-                        <p></p>
-                        <sup>*</sup>bindings<br />
-                        <sup>†</sup>not formally part of GeoRust<br />
-                        <sup>‡</sup> multiple implementations available, some in
-                        GeoRust, some not
-                    </div>
                 </section>
                 <section>
                     <h3>Resources</h3>
